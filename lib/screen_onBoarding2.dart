@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_onBoarding3.dart';
+import 'package:speedcode_streetfood/screen_signup.dart';
 
 class OnBoarding2 extends StatelessWidget {
   const OnBoarding2({Key? key}) : super(key: key);
@@ -16,12 +17,20 @@ class OnBoarding2 extends StatelessWidget {
             Center(
               child: Padding(
                 padding: const EdgeInsets.only(right: 10),
-                child: Text(
-                  "Skip",
-                  style: TextStyle(
-                      color: Color(0xff989898),
-                      fontFamily: 'PoppinsMedium',
-                      fontSize: 15),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignupScreen()));
+                  },
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(
+                        color: Color(0xff989898),
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: 15),
+                  ),
                 ),
               ),
             )
