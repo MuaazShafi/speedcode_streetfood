@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_login.dart';
+import 'package:speedcode_streetfood/widgets/myTextField.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({Key? key}) : super(key: key);
@@ -88,39 +89,8 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              hintText: "e.g. John",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding: EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: 'Muaaz',
                     ),
                     SizedBox(
                       height: 10,
@@ -139,40 +109,8 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                              hintText: "abc@gmail.com",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding: EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: 'abc@gmail.com',
                     ),
                     SizedBox(
                       height: 10,
@@ -191,47 +129,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          obscuringCharacter: "*",
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                              suffixIcon: Icon(
-                                Icons.visibility_outlined,
-                                size: 18,
-                                color: Color(0xff727272),
-                              ),
-                              hintText: "***********",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding: EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: '*****',
+                      isHidden: true,
+                      suffixIcon: Icons.visibility_outlined,
                     ),
                     SizedBox(
                       height: 10,
@@ -250,47 +151,10 @@ class SignupScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          obscuringCharacter: "*",
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                              suffixIcon: Icon(
-                                Icons.visibility_outlined,
-                                size: 18,
-                                color: Color(0xff727272),
-                              ),
-                              hintText: "***********",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding: EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: '*****',
+                      isHidden: true,
+                      suffixIcon: Icons.visibility_outlined,
                     ),
                     SizedBox(
                       height: 10,
@@ -312,7 +176,9 @@ class SignupScreen extends StatelessWidget {
                           child: Text(
                             "SIGNUP",
                             style: TextStyle(
-                                fontFamily: 'PoppinsSemiBold', fontSize: 12),
+                              fontFamily: 'PoppinsSemiBold',
+                              fontSize: 12,
+                            ),
                           ),
                         ),
                       ),
@@ -341,7 +207,9 @@ class SignupScreen extends StatelessWidget {
                             Text(
                               "Signup with Google",
                               style: TextStyle(
-                                  fontFamily: 'PoppinsSemiBold', fontSize: 12),
+                                fontFamily: 'PoppinsSemiBold',
+                                fontSize: 12,
+                              ),
                             ),
                           ],
                         ),

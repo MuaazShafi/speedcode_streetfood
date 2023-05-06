@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_forgotPassword.dart';
 import 'package:speedcode_streetfood/screen_signup.dart';
+import 'package:speedcode_streetfood/widgets/myTextField.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -40,7 +41,9 @@ class LoginScreen extends StatelessWidget {
                         height: 83,
                         width: 83,
                         decoration: BoxDecoration(
-                            color: Color(0xffF7BB0E), shape: BoxShape.circle),
+                          color: Color(0xffF7BB0E),
+                          shape: BoxShape.circle,
+                        ),
                       ),
                     ),
                     Positioned(
@@ -90,41 +93,8 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                              hintText: "abc@gmail.com",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding:
-                                  EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: 'abc@gmail.com',
                     ),
                     SizedBox(
                       height: 10,
@@ -143,48 +113,10 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      height: 31,
-                      child: Material(
-                        elevation: 1.5,
-                        borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          obscuringCharacter: "*",
-                          keyboardType: TextInputType.emailAddress,
-                          decoration: InputDecoration(
-                              suffixIcon: Icon(
-                                Icons.visibility_outlined,
-                                size: 18,
-                                color: Color(0xff727272),
-                              ),
-                              hintText: "***********",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding:
-                                  EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                    myTextField(
+                      hintText: '*****',
+                      isHidden: true,
+                      suffixIcon: Icons.visibility_outlined,
                     ),
                     SizedBox(
                       height: 10,

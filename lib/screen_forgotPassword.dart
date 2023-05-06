@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speedcode_streetfood/widgets/myTextField.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
@@ -55,41 +56,10 @@ class ForgotScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: SizedBox(
-                        height: 31,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              suffixIcon: Icon(
-                                Icons.circle_outlined,
-                                size: 18,
-                              ),
-                              hintText: "abc@gmail.com",
-                              hintStyle: TextStyle(
-                                  color: Color(0xff000000),
-                                  fontSize: 10,
-                                  fontFamily: "PoppinsMedium"),
-                              contentPadding:
-                                  EdgeInsets.only(top: 10, left: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
-                                ),
-                              )),
-                        ),
-                      ),
+                      child: myTextField(
+                        hintText: 'abc@gmail.com',
+                        suffixIcon: Icons.circle_outlined,
+                      )
                     )
                   ],
                 ),
