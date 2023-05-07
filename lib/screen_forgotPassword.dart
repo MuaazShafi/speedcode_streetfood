@@ -56,10 +56,44 @@ class ForgotScreen extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: myTextField(
-                        hintText: 'abc@gmail.com',
-                        suffixIcon: Icons.circle_outlined,
-                      )
+                      child:SizedBox(
+                        height: 31,
+                        child: Material(
+                          elevation: 1.5,
+                          borderRadius: BorderRadius.circular(14),
+                          child: TextFormField(
+                            obscureText: false,
+                            decoration: InputDecoration(
+                              hintText: "abc@gmail.com",
+                              suffixIcon: Icon(Icons.circle_outlined),
+                              hintStyle: TextStyle(
+                                color: Color(0xff000000),
+                                fontSize: 10,
+                                fontFamily: "PoppinsMedium",
+                              ),
+                              contentPadding: EdgeInsets.only(top: 10, left: 10),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                borderSide: BorderSide(
+                                  color: Color(0xffF7BB0E),
+                                ),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                borderSide: BorderSide(
+                                  color: Color(0xffF7BB0E),
+                                ),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                borderSide: BorderSide(
+                                  color: Color(0xffF7BB0E),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 ),
