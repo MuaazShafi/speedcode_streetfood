@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_forgotPassword.dart';
 import 'package:speedcode_streetfood/screen_signup.dart';
 
+import 'myWidgets/textField.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -97,35 +99,8 @@ class LoginScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: "abc@gmail.com",
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: "abc@gmail.com",
                         ),
                       ),
                     ),
@@ -151,36 +126,9 @@ class LoginScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: "*****",
-                            suffixIcon: Icon(Icons.visibility_outlined),
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: "****",
+                          showSuffixIcon: true,
                         ),
                       ),
                     ),
