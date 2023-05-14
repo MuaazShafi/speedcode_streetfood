@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_forgotPassword.dart';
 import 'package:speedcode_streetfood/screen_signup.dart';
-import 'package:speedcode_streetfood/widgets/myTextField.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);

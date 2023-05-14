@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/screen_login.dart';
-import 'package:speedcode_streetfood/widgets/myTextField.dart';
+
+import 'myWidgets/textField.dart';
 
 class SignupScreen extends StatelessWidget {
-  const SignupScreen({Key? key}) : super(key: key);
+  SignupScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    bool obscureText = true;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Color(0xffffffff),
@@ -94,35 +97,8 @@ class SignupScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: "Muaaz",
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: "abc@gmail.com",
                         ),
                       ),
                     ),
@@ -148,35 +124,8 @@ class SignupScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            hintText: "abc@gmail.com",
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: 'abc@gmail.com',
                         ),
                       ),
                     ),
@@ -202,36 +151,9 @@ class SignupScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: "*****",
-                            suffixIcon: Icon(Icons.visibility_outlined),
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: "****",
+                          showSuffixIcon: true,
                         ),
                       ),
                     ),
@@ -257,36 +179,9 @@ class SignupScreen extends StatelessWidget {
                       child: Material(
                         elevation: 1.5,
                         borderRadius: BorderRadius.circular(14),
-                        child: TextFormField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: "*****",
-                            suffixIcon: Icon(Icons.visibility_outlined),
-                            hintStyle: TextStyle(
-                              color: Color(0xff000000),
-                              fontSize: 10,
-                              fontFamily: "PoppinsMedium",
-                            ),
-                            contentPadding: EdgeInsets.only(top: 10, left: 10),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(14),
-                              borderSide: BorderSide(
-                                color: Color(0xffF7BB0E),
-                              ),
-                            ),
-                          ),
+                        child: MyTextField(
+                          hintText: "*****",
+                          showSuffixIcon: true,
                         ),
                       ),
                     ),

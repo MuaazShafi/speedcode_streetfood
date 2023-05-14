@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/widgets/myTextField.dart';
-
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
 
