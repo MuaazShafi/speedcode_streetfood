@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:speedcode_streetfood/colors.dart';
+
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
 
@@ -10,26 +12,27 @@ class ForgotScreen extends StatelessWidget {
           title: Text(
             "Forget Password",
             style: TextStyle(
-                color: Color(0xff000000),
-                fontFamily: 'PoppinsMedium',
-                fontSize: 13),
+              color: StreetFoodColors.blackColor,
+              fontFamily: 'PoppinsMedium',
+              fontSize: 13,
+            ),
           ),
           centerTitle: true,
           elevation: 0,
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: StreetFoodColors.whiteColor,
           automaticallyImplyLeading: false,
           leading: GestureDetector(
-            onTap: (){
+            onTap: () {
               Navigator.pop(context);
             },
             child: Icon(
               Icons.arrow_back_ios,
               size: 18,
-              color: Color(0xff000000),
+              color: StreetFoodColors.blackColor,
             ),
           ),
         ),
-        backgroundColor: Color(0xffffffff),
+        backgroundColor: StreetFoodColors.whiteColor,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 80),
           child: Column(
@@ -45,16 +48,17 @@ class ForgotScreen extends StatelessWidget {
                     Text(
                       "Select email should we use to reset\npassword",
                       style: TextStyle(
-                          color: Color(0xff7D7D7D),
-                          fontFamily: 'PoppinsMedium',
-                          fontSize: 13),
+                        color: StreetFoodColors.greyColor,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: 13,
+                      ),
                     ),
                     SizedBox(
                       height: 50,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child:SizedBox(
+                      child: SizedBox(
                         height: 31,
                         child: Material(
                           elevation: 1.5,
@@ -65,27 +69,28 @@ class ForgotScreen extends StatelessWidget {
                               hintText: "abc@gmail.com",
                               suffixIcon: Icon(Icons.circle_outlined),
                               hintStyle: TextStyle(
-                                color: Color(0xff000000),
+                                color: StreetFoodColors.blackColor,
                                 fontSize: 10,
                                 fontFamily: "PoppinsMedium",
                               ),
-                              contentPadding: EdgeInsets.only(top: 10, left: 10),
+                              contentPadding:
+                                  EdgeInsets.only(top: 10, left: 10),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
+                                  color: StreetFoodColors.yellowColor,
                                 ),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
+                                  color: StreetFoodColors.yellowColor,
                                 ),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: BorderSide(
-                                  color: Color(0xffF7BB0E),
+                                  color: StreetFoodColors.yellowColor,
                                 ),
                               ),
                             ),
@@ -101,7 +106,7 @@ class ForgotScreen extends StatelessWidget {
                   height: 36,
                   width: 148,
                   decoration: BoxDecoration(
-                    color: Color(0xffF7BB0E),
+                    color: StreetFoodColors.yellowColor,
                     borderRadius: BorderRadius.circular(29),
                   ),
                   child: Center(
@@ -115,7 +120,9 @@ class ForgotScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 100,)
+              SizedBox(
+                height: 100,
+              )
             ],
           ),
         ),

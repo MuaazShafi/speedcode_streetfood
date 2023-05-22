@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/screen_onBoarding1.dart';
+import 'package:speedcode_streetfood/Screens/screen_onBoarding1.dart';
 
 void main() {
   runApp(const MyApp());

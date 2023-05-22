@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/screen_signup.dart';
+import 'package:speedcode_streetfood/Screens/screen_signup.dart';
+import 'package:speedcode_streetfood/colors.dart';
 
 class OnBoarding3 extends StatelessWidget {
   const OnBoarding3({Key? key}) : super(key: key);
@@ -8,10 +9,10 @@ class OnBoarding3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffffffff),
+        backgroundColor: StreetFoodColors.whiteColor,
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: StreetFoodColors.whiteColor,
         ),
         body: Column(
           children: [
@@ -36,7 +37,7 @@ class OnBoarding3 extends StatelessWidget {
                     "and we’ill do the rest",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xffACACAC),
+                      color: StreetFoodColors.greyColor,
                       fontFamily: 'PoppinsRegular',
                       fontSize: 15,
                     ),
@@ -49,7 +50,7 @@ class OnBoarding3 extends StatelessWidget {
         floatingActionButton: Padding(
           padding: const EdgeInsets.only(bottom: 20),
           child: FloatingActionButton.extended(
-            backgroundColor: Color(0xffF7BB0E),
+            backgroundColor: StreetFoodColors.yellowColor,
             onPressed: () {
                 Navigator.push(
                     context,
@@ -59,7 +60,7 @@ class OnBoarding3 extends StatelessWidget {
             label: Text(
               "GET STARTED",
               style: TextStyle(
-                  color: Color(0xff000000),
+                  color: StreetFoodColors.blackColor,
                   fontFamily: 'PoppinsSemiBold',
                   fontSize: 15),
             ),

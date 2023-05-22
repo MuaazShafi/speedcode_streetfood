@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/screen_login.dart';
+import 'package:speedcode_streetfood/Screens/screen_login.dart';
+import 'package:speedcode_streetfood/colors.dart';
 
-import 'myWidgets/textField.dart';
+import '../Widgets/textField.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({Key? key}) : super(key: key);
@@ -12,9 +13,9 @@ class SignupScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffffffff),
+        backgroundColor: StreetFoodColors.whiteColor,
         appBar: AppBar(
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: StreetFoodColors.whiteColor,
           elevation: 0,
           automaticallyImplyLeading: false,
           leading: GestureDetector(
@@ -24,7 +25,7 @@ class SignupScreen extends StatelessWidget {
             child: Icon(
               Icons.arrow_back_ios,
               size: 18,
-              color: Color(0xff000000),
+              color: StreetFoodColors.blackColor,
             ),
           ),
         ),
@@ -43,7 +44,9 @@ class SignupScreen extends StatelessWidget {
                         height: 83,
                         width: 83,
                         decoration: BoxDecoration(
-                            color: Color(0xffF7BB0E), shape: BoxShape.circle),
+                          color: StreetFoodColors.yellowColor,
+                          shape: BoxShape.circle,
+                        ),
                       ),
                     ),
                     Positioned(
@@ -69,7 +72,7 @@ class SignupScreen extends StatelessWidget {
                       child: Text(
                         "Create an account so you can see  our\nlatest Recipes",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -83,7 +86,7 @@ class SignupScreen extends StatelessWidget {
                       child: Text(
                         "Name",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -110,7 +113,7 @@ class SignupScreen extends StatelessWidget {
                       child: Text(
                         "Email",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -137,7 +140,7 @@ class SignupScreen extends StatelessWidget {
                       child: Text(
                         "Password",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -165,7 +168,7 @@ class SignupScreen extends StatelessWidget {
                       child: Text(
                         "Confirm Password",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -198,7 +201,7 @@ class SignupScreen extends StatelessWidget {
                         height: 36,
                         width: 223,
                         decoration: BoxDecoration(
-                          color: Color(0xffF7BB0E),
+                          color: StreetFoodColors.yellowColor,
                           borderRadius: BorderRadius.circular(29),
                         ),
                         child: Center(
@@ -222,7 +225,7 @@ class SignupScreen extends StatelessWidget {
                         height: 36,
                         width: 223,
                         decoration: BoxDecoration(
-                          color: Color(0xffF7BB0E),
+                          color: StreetFoodColors.yellowColor,
                           borderRadius: BorderRadius.circular(29),
                         ),
                         child: Row(
@@ -262,7 +265,7 @@ class SignupScreen extends StatelessWidget {
                             indent: 4,
                             endIndent: 4,
                             thickness: 1,
-                            color: Color(0xffF7BB0E),
+                            color: StreetFoodColors.yellowColor,
                           ),
                           GestureDetector(
                             onTap: () {
@@ -274,7 +277,7 @@ class SignupScreen extends StatelessWidget {
                             child: Text(
                               'LOGIN',
                               style: TextStyle(
-                                color: Color(0xffF7BB0E),
+                                color: StreetFoodColors.yellowColor,
                                 fontFamily: 'PoppinsMedium',
                                 fontSize: 12,
                               ),

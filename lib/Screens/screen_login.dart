@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/screen_forgotPassword.dart';
-import 'package:speedcode_streetfood/screen_signup.dart';
+import 'package:speedcode_streetfood/Screens/screen_forgotPassword.dart';
+import 'package:speedcode_streetfood/Screens/screen_signup.dart';
+import 'package:speedcode_streetfood/colors.dart';
 
-import 'myWidgets/textField.dart';
-
+import '../Widgets/textField.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -11,9 +11,9 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xffffffff),
+        backgroundColor: StreetFoodColors.whiteColor,
         appBar: AppBar(
-          backgroundColor: Color(0xffffffff),
+          backgroundColor: StreetFoodColors.whiteColor,
           elevation: 0,
           automaticallyImplyLeading: false,
           leading: GestureDetector(
@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
             child: Icon(
               Icons.arrow_back_ios,
               size: 18,
-              color: Color(0xff000000),
+              color: StreetFoodColors.blackColor,
             ),
           ),
         ),
@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                         height: 83,
                         width: 83,
                         decoration: BoxDecoration(
-                          color: Color(0xffF7BB0E),
+                          color: StreetFoodColors.yellowColor,
                           shape: BoxShape.circle,
                         ),
                       ),
@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                         "I am very happy to see you. You can continue to login "
                         "for latest recipe",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -85,7 +85,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         "Email",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -112,7 +112,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         "Password",
                         style: TextStyle(
-                          color: Color(0xffADAAAA),
+                          color: StreetFoodColors.greyColor,
                           fontFamily: 'PoppinsRegular',
                           fontSize: 12,
                         ),
@@ -147,7 +147,7 @@ class LoginScreen extends StatelessWidget {
                         child: Text(
                           'Forget Password',
                           style: TextStyle(
-                              color: Color(0xff969494),
+                              color: StreetFoodColors.greyColor,
                               fontFamily: 'PoppinsMedium',
                               fontSize: 10),
                         ),
@@ -163,7 +163,7 @@ class LoginScreen extends StatelessWidget {
                         height: 36,
                         width: 148,
                         decoration: BoxDecoration(
-                          color: Color(0xffF7BB0E),
+                          color: StreetFoodColors.yellowColor,
                           borderRadius: BorderRadius.circular(29),
                         ),
                         child: Center(
@@ -194,7 +194,7 @@ class LoginScreen extends StatelessWidget {
                               indent: 4,
                               endIndent: 4,
                               thickness: 1,
-                              color: Color(0xffF7BB0E),
+                              color: StreetFoodColors.yellowColor,
                             ),
                             GestureDetector(
                               onTap: () {
@@ -206,7 +206,7 @@ class LoginScreen extends StatelessWidget {
                               child: Text(
                                 'SIGNUP',
                                 style: TextStyle(
-                                  color: Color(0xffF7BB0E),
+                                  color: StreetFoodColors.yellowColor,
                                   fontFamily: 'PoppinsMedium',
                                   fontSize: 12,
                                 ),
