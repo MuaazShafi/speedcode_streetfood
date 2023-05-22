@@ -392,9 +392,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Categories',
                         style: TextStyle(
-                            color: Color(0xff000000),
-                            fontFamily: 'PoppinsSemiBold',
-                            fontSize: 15),
+                          color: Color(0xff000000),
+                          fontFamily: 'PoppinsSemiBold',
+                          fontSize: 15,
+                        ),
                       ),
                       Spacer(),
                       Icon(
