@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:speedcode_streetfood/colors.dart';
 
 class MyTextField extends StatefulWidget {
   final String hintText;
@@ -43,32 +44,32 @@ class _MyTextFieldState extends State<MyTextField> {
         //Hides label on focus or if filled
         hintText: widget.hintText,
         hintStyle: TextStyle(
-          color: Color(0xff000000),
+          color: StreetFoodColors.blackColor,
           fontSize: 10,
           fontFamily: "PoppinsMedium",
         ),
         filled: true,
         // Needed for adding a fill color
-        fillColor: Color(0xffffffff),
+        fillColor: StreetFoodColors.whiteColor,
         isDense: false,
         // Reduces height a bit
         contentPadding: EdgeInsets.only(top: 10, left: 10),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: Color(0xffF7BB0E),
+            color: StreetFoodColors.yellowColor,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: Color(0xffF7BB0E),
+            color: StreetFoodColors.yellowColor,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: Color(0xffF7BB0E),
+            color: StreetFoodColors.yellowColor,
           ),
         ),
         suffixIcon: widget.showSuffixIcon
@@ -80,7 +81,7 @@ class _MyTextFieldState extends State<MyTextField> {
                     _obscured
                         ? Icons.visibility_outlined
                         : Icons.visibility_off_outlined,
-                    color: Color(0xff727272),
+                    color: StreetFoodColors.greyColor,
                     size: 20,
                   ),
                 ),

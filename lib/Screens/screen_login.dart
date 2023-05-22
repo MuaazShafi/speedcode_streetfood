@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_forgotPassword.dart';
+import 'package:speedcode_streetfood/Screens/screen_home.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
 import 'package:speedcode_streetfood/colors.dart';
 
 import '../Widgets/textField.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -159,19 +161,27 @@ class LoginScreen extends StatelessWidget {
                     Material(
                       borderRadius: BorderRadius.circular(29),
                       elevation: 1.5,
-                      child: Container(
-                        height: 36,
-                        width: 148,
-                        decoration: BoxDecoration(
-                          color: StreetFoodColors.yellowColor,
-                          borderRadius: BorderRadius.circular(29),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "LOGIN",
-                            style: TextStyle(
-                              fontFamily: 'PoppinsSemiBold',
-                              fontSize: 12,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeScreen()));
+                        },
+                        child: Container(
+                          height: 36,
+                          width: 148,
+                          decoration: BoxDecoration(
+                            color: StreetFoodColors.yellowColor,
+                            borderRadius: BorderRadius.circular(29),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "LOGIN",
+                              style: TextStyle(
+                                fontFamily: 'PoppinsSemiBold',
+                                fontSize: 12,
+                              ),
                             ),
                           ),
                         ),

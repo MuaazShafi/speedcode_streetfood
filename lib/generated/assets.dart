@@ -2,10 +2,32 @@
 class Assets {
   Assets._();
 
+  static const String imagesAndha = 'images/andha.jpg';
+  static const String imagesBachaOfChahca = 'images/bachaOfChahca.jpg';
+  static const String imagesBurger = 'images/burger.jpg';
+  static const String imagesChacha1 = 'images/chacha1.jpg';
+  static const String imagesChachi = 'images/chachi.jpg';
+  static const String imagesChicken = 'images/chicken.jpg';
+  static const String imagesChickenwings = 'images/chicken wings.jpg';
+  static const String imagesEyeicon = 'images/eye.icon.png';
   static const String imagesFP = 'images/fP.png';
   static const String imagesGoogle = 'images/google.png';
+  static const String imagesKabab = 'images/kabab.webp';
+  static const String imagesKababpetty = 'images/kabab petty.jpg';
+  static const String imagesMutton = 'images/mutton.jpg';
+  static const String imagesNuggets = 'images/nuggets.jpg';
   static const String imagesOB01 = 'images/oB01.png';
   static const String imagesOB02 = 'images/oB02.png';
   static const String imagesOB03 = 'images/oB03.png';
+  static const String imagesOliveoilSponchCake = 'images/oliveoil_sponch_cake.jpg';
+  static const String imagesProfile = 'images/profile.jpg';
+  static const String imagesPumpkinSpiceCakeRoll = 'images/Pumpkin-Spice-Cake-Roll.jpg';
+  static const String imagesPumpkinTiramisu = 'images/Pumpkin-Tiramisu.jpg';
+  static const String imagesSlices = 'images/slices.jpg';
+  static const String imagesSliderIcon = 'images/sliderIcon.png';
+  static const String imagesSoup = 'images/soup.jpg';
+  static const String imagesStrawberryFrechCake = 'images/Strawberry-Frech-Cake.jpg';
+  static const String imagesTikka = 'images/tikka.jpg';
+  static const String imagesVanillaCardamomKulfi = 'images/Vanilla-Cardamom-Kulfi.jpg';
 
 }
