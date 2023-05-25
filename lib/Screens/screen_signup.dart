@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_login.dart';
 import 'package:speedcode_streetfood/colors.dart';
+import 'package:speedcode_streetfood/layouts/layout_home.dart';
 
 import '../Widgets/textField.dart';
 
@@ -197,19 +198,27 @@ class SignupScreen extends StatelessWidget {
                     Material(
                       borderRadius: BorderRadius.circular(29),
                       elevation: 1.5,
-                      child: Container(
-                        height: 36,
-                        width: 223,
-                        decoration: BoxDecoration(
-                          color: StreetFoodColors.yellowColor,
-                          borderRadius: BorderRadius.circular(29),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "SIGNUP",
-                            style: TextStyle(
-                              fontFamily: 'PoppinsSemiBold',
-                              fontSize: 12,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomeLayout()));
+                        },
+                        child: Container(
+                          height: 36,
+                          width: 223,
+                          decoration: BoxDecoration(
+                            color: StreetFoodColors.yellowColor,
+                            borderRadius: BorderRadius.circular(29),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "SIGNUP",
+                              style: TextStyle(
+                                fontFamily: 'PoppinsSemiBold',
+                                fontSize: 12,
+                              ),
                             ),
                           ),
                         ),

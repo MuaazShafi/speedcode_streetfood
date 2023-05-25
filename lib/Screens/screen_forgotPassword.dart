@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/colors.dart';
+import 'package:speedcode_streetfood/layouts/layout_home.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
@@ -102,19 +103,25 @@ class ForgotScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Container(
-                  height: 36,
-                  width: 148,
-                  decoration: BoxDecoration(
-                    color: StreetFoodColors.yellowColor,
-                    borderRadius: BorderRadius.circular(29),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "LOGIN",
-                      style: TextStyle(
-                        fontFamily: 'PoppinsSemiBold',
-                        fontSize: 12,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomeLayout()));
+                  },
+                  child: Container(
+                    height: 36,
+                    width: 148,
+                    decoration: BoxDecoration(
+                      color: StreetFoodColors.yellowColor,
+                      borderRadius: BorderRadius.circular(29),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "LOGIN",
+                        style: TextStyle(
+                          fontFamily: 'PoppinsSemiBold',
+                          fontSize: 12,
+                        ),
                       ),
                     ),
                   ),

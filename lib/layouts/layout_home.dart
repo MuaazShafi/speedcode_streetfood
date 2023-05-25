@@ -7,7 +7,6 @@ import '../Screens/screen_search.dart';
 import '../Screens/screen_setting.dart';
 import '../Widgets/myDrawerList.dart';
 import '../colors.dart';
-import 'layout_favourite.dart';
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({Key? key}) : super(key: key);
@@ -96,32 +95,6 @@ class _HomeLayoutState extends State<HomeLayout> {
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoginScreen()));
-                },
-                paddingLeft: 10,
-                paddingRight: 50,
-                paddingTop: 10,
-              ),
-              MyDrawerList(
-                text: "Admin Home",
-                suffixIcon: Icons.arrow_forward_ios,
-                prefixIcon: Icons.person,
-                // onTap: () {
-                //   Navigator.push(context,
-                //       MaterialPageRoute(builder: (context) => LoginScreen()));
-                // },
-                paddingLeft: 10,
-                paddingRight: 50,
-                paddingTop: 10,
-              ),
-              MyDrawerList(
-                text: "Favorite",
-                suffixIcon: Icons.arrow_forward_ios,
-                prefixIcon: Icons.favorite,
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => FavouriteLayout()));
                 },
                 paddingLeft: 10,
                 paddingRight: 50,
