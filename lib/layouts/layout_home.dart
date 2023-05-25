@@ -1,17 +1,16 @@
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_favourite.dart';
-import 'package:speedcode_streetfood/Screens/screen_login.dart';
-import 'package:speedcode_streetfood/Screens/screen_notification.dart';
-import 'package:speedcode_streetfood/Screens/screen_search.dart';
-import 'package:speedcode_streetfood/Screens/screen_setting.dart';
-import 'package:speedcode_streetfood/Widgets/myDrawerList.dart';
-import 'package:speedcode_streetfood/colors.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+import '../Screens/screen_login.dart';
+import '../Screens/screen_notification.dart';
+import '../Screens/screen_search.dart';
+import '../Screens/screen_setting.dart';
+import '../Widgets/myDrawerList.dart';
+import '../colors.dart';
+import 'layout_favourite.dart';
 
+class HomeLayout extends StatefulWidget {
+  const HomeLayout({Key? key}) : super(key: key);
   static var currentIndexIndicator = 0;
   static var currentIndexCategory = 0;
   static var bottomBarCurrentIndex = 0;
@@ -39,10 +38,10 @@ class HomeScreen extends StatefulWidget {
   ];
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeLayout> createState() => _HomeLayoutState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeLayoutState extends State<HomeLayout> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -122,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => FavouriteScreen()));
+                          builder: (context) => FavouriteLayout()));
                 },
                 paddingLeft: 10,
                 paddingRight: 50,
@@ -281,8 +280,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: PageView.builder(
                     onPageChanged: (index) {
                       setState(() {
-                        HomeScreen.currentIndexIndicator =
-                            index % HomeScreen.imageList.length;
+                        HomeLayout.currentIndexIndicator =
+                            index % HomeLayout.imageList.length;
                       });
                     },
                     scrollDirection: Axis.horizontal,
@@ -297,8 +296,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             image: DecorationImage(
                               fit: BoxFit.fitWidth,
                               image: AssetImage(
-                                HomeScreen.imageList[
-                                    index % HomeScreen.imageList.length],
+                                HomeLayout.imageList[
+                                    index % HomeLayout.imageList.length],
                               ),
                             ),
                             borderRadius: BorderRadius.all(
@@ -328,8 +327,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        HomeScreen.itemName[
-                                            index % HomeScreen.itemName.length],
+                                        HomeLayout.itemName[
+                                            index % HomeLayout.itemName.length],
                                         style: TextStyle(
                                             color: StreetFoodColors.whiteColor,
                                             fontSize: 15,
@@ -380,8 +379,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    for (var a = 0; a < HomeScreen.imageList.length; a++)
-                      buildIndicator(HomeScreen.currentIndexIndicator == a)
+                    for (var a = 0; a < HomeLayout.imageList.length; a++)
+                      buildIndicator(HomeLayout.currentIndexIndicator == a)
                   ],
                 ),
                 Padding(
@@ -416,9 +415,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        for (var b = 0; b < HomeScreen.imageList.length; b++)
+                        for (var b = 0; b < HomeLayout.imageList.length; b++)
                           buildCategoryIndicator(
-                              HomeScreen.currentIndexCategory == b)
+                              HomeLayout.currentIndexCategory == b)
                       ],
                     ),
                   ),
@@ -427,7 +426,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(20.0),
                   child: GridView.builder(
                     shrinkWrap: true,
-                    itemCount: HomeScreen.imageList.length,
+                    itemCount: HomeLayout.imageList.length,
                     physics: NeverScrollableScrollPhysics(),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
@@ -440,7 +439,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         image: DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            HomeScreen.imageList[i],
+                            HomeLayout.imageList[i],
                           ),
                         ),
                         borderRadius: BorderRadius.all(
@@ -553,90 +552,44 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        // bottomNavigationBar: SalomonBottomBar(
-        //   currentIndex: HomeScreen.bottomBarCurrentIndex,
-        //   selectedItemColor: StreetFoodColors.yellowColor,
-        //   unselectedItemColor: StreetFoodColors.blackColor,
-        //   selectedColorOpacity: 1,
-        //   onTap: (x) => setState(() => HomeScreen.bottomBarCurrentIndex = x),
-        //   items: [
-        //     SalomonBottomBarItem(
-        //       icon: Icon(
-        //         Icons.home_filled,
-        //         color: StreetFoodColors.whiteColor,
-        //       ),
-        //       title: Text(
-        //         'HOME',
-        //         style: TextStyle(
-        //           color: Color(0xffFFFFFF),
-        //         ),
-        //       ),
-        //     ),
-        //     SalomonBottomBarItem(
-        //       icon: Icon(
-        //         Icons.favorite_outline,
-        //         color: Color(0xffFFFFFF),
-        //       ),
-        //       title: Text(
-        //         'FAVOURITE',
-        //         style: TextStyle(
-        //           color: Color(0xffFFFFFF),
-        //         ),
-        //       ),
-        //     ),
-        //     SalomonBottomBarItem(
-        //       unselectedColor: Color(0xff000000),
-        //       icon: Icon(
-        //         Icons.person_2_outlined,
-        //         color: Color(0xffFFFFFF),
-        //       ),
-        //       title: Text(
-        //         'PROFILE',
-        //         style: TextStyle(
-        //           color: Color(0xffFFFFFF),
-        //         ),
-        //       ),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }
+}
 
-  Widget buildIndicator(bool isSelected) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: Container(
-        height: isSelected ? 12 : 10,
-        width: isSelected ? 12 : 10,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: isSelected
-              ? StreetFoodColors.yellowColor
-              : StreetFoodColors.greyColor,
+Widget buildIndicator(bool isSelected) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 4),
+    child: Container(
+      height: isSelected ? 12 : 10,
+      width: isSelected ? 12 : 10,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: isSelected
+            ? StreetFoodColors.yellowColor
+            : StreetFoodColors.greyColor,
+      ),
+    ),
+  );
+}
+
+Widget buildCategoryIndicator(bool isSelected1) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 1),
+    child: Container(
+      height: 29,
+      width: 90,
+      decoration: BoxDecoration(
+        color: isSelected1
+            ? StreetFoodColors.yellowColor
+            : StreetFoodColors.whiteColor,
+        borderRadius: BorderRadius.circular(07),
+        border: Border.all(
+          width: 1.5,
+          color: StreetFoodColors.yellowColor,
         ),
       ),
-    );
-  }
-
-  Widget buildCategoryIndicator(bool isSelected1) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 1),
-      child: Container(
-        height: 29,
-        width: 90,
-        decoration: BoxDecoration(
-          color: isSelected1
-              ? StreetFoodColors.yellowColor
-              : StreetFoodColors.whiteColor,
-          borderRadius: BorderRadius.circular(07),
-          border: Border.all(
-            width: 1.5,
-            color: StreetFoodColors.yellowColor,
-          ),
-        ),
-        child: Center(child: Text("---")),
-      ),
-    );
-  }
+      child: Center(child: Text("---")),
+    ),
+  );
 }

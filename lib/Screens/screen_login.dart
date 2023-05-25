@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_forgotPassword.dart';
-import 'package:speedcode_streetfood/Screens/screen_home.dart';
+import 'package:speedcode_streetfood/Widgets/Navigations.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
 import 'package:speedcode_streetfood/colors.dart';
 
@@ -166,7 +166,7 @@ class LoginScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeScreen()));
+                                  builder: (context) => Navigation()));
                         },
                         child: Container(
                           height: 36,

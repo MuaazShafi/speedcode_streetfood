@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:speedcode_streetfood/colors.dart';
 
 import '../Widgets/myFavouriteItem.dart';
 
-class FavouriteScreen extends StatelessWidget {
-  const FavouriteScreen({Key? key}) : super(key: key);
+class FavouriteLayout extends StatelessWidget {
+  const FavouriteLayout({Key? key}) : super(key: key);
 
   static const List<String> desertsImages = [
     'images/oliveoil_sponch_cake.jpg',
