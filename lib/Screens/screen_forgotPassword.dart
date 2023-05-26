@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/colors.dart';
 import 'package:speedcode_streetfood/layouts/layout_home.dart';
 
+import '../Widgets/Navigations.dart';
+
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
 
@@ -106,7 +108,7 @@ class ForgotScreen extends StatelessWidget {
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeLayout()));
+                        MaterialPageRoute(builder: (context) => Navigation()));
                   },
                   child: Container(
                     height: 36,

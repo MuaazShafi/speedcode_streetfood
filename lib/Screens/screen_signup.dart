@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_login.dart';
 import 'package:speedcode_streetfood/colors.dart';
-import 'package:speedcode_streetfood/layouts/layout_home.dart';
 
+import '../Widgets/Navigations.dart';
 import '../Widgets/textField.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -203,7 +203,7 @@ class SignupScreen extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomeLayout()));
+                                  builder: (context) => Navigation()));
                         },
                         child: Container(
                           height: 36,
