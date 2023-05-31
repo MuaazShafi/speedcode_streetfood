@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/layouts/layout_favourite.dart';
-import 'package:speedcode_streetfood/colors.dart';
 import 'package:speedcode_streetfood/layouts/layout_home.dart';
 import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 
 import '../layouts/layout_editProfile.dart';
+import 'colors.dart';
 
 class Navigation extends StatefulWidget {
   Navigation({Key? key}) : super(key: key);

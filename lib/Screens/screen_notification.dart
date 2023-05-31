@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
+
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({Key? key}) : super(key: key);

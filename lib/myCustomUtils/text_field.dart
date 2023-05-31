@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import 'colors.dart';
 
 class MyTextField extends StatefulWidget {
   final String hintText;
-  final bool obscureText;
+  final bool? obscureText;
   final bool showSuffixIcon;
   final TextInputType? keyboardType;
 
   const MyTextField({
     Key? key,
     required this.hintText,
-    this.obscureText = false,
+    this.obscureText,
     this.showSuffixIcon = false,
     this.keyboardType,
   }) : super(key: key);
@@ -25,7 +26,7 @@ class _MyTextFieldState extends State<MyTextField> {
   @override
   void initState() {
     super.initState();
-    _obscured = widget.obscureText;
+    _obscured = widget.obscureText ?? false;
   }
 
   void _toggleObscured() {
@@ -38,7 +39,7 @@ class _MyTextFieldState extends State<MyTextField> {
   Widget build(BuildContext context) {
     return TextField(
       keyboardType: widget.keyboardType,
-      obscureText: _obscured,
+      obscureText: _obscured ?? false,
       decoration: InputDecoration(
         floatingLabelBehavior: FloatingLabelBehavior.never,
         //Hides label on focus or if filled

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
 
 void main() {
   runApp(SearchScreen());

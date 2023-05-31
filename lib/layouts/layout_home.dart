@@ -5,8 +5,8 @@ import '../Screens/screen_login.dart';
 import '../Screens/screen_notification.dart';
 import '../Screens/screen_search.dart';
 import '../Screens/screen_setting.dart';
-import '../Widgets/myDrawerList.dart';
-import '../colors.dart';
+import '../myCustomUtils/colors.dart';
+import '../myCustomUtils/my_drawer_list.dart';
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({Key? key}) : super(key: key);

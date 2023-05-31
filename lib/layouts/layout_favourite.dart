@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/colors.dart';
 
-import '../Widgets/myFavouriteItem.dart';
+import '../myCustomUtils/colors.dart';
+import '../myCustomUtils/my_favourite_item.dart';
 
 class FavouriteLayout extends StatelessWidget {
   const FavouriteLayout({Key? key}) : super(key: key);

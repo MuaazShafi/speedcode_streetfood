@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_onBoarding2.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
+
 
 class OnBoarding1 extends StatelessWidget {
   const OnBoarding1({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Widgets/textField.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
 
 class EditProfileLayout extends StatelessWidget {
   const EditProfileLayout({Key? key}) : super(key: key);

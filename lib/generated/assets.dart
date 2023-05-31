@@ -26,6 +26,7 @@ class Assets {
   static const String imagesSlices = 'images/slices.jpg';
   static const String imagesSliderIcon = 'images/sliderIcon.png';
   static const String imagesSoup = 'images/soup.jpg';
+  static const String imagesSplash = 'images/splash.png';
   static const String imagesStrawberryFrechCake = 'images/Strawberry-Frech-Cake.jpg';
   static const String imagesTikka = 'images/tikka.jpg';
   static const String imagesVanillaCardamomKulfi = 'images/Vanilla-Cardamom-Kulfi.jpg';

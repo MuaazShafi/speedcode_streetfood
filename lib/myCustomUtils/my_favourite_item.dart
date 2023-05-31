@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import 'colors.dart';
 
 class FavouriteItem extends StatelessWidget {
   const FavouriteItem({

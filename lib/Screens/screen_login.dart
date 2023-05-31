@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_forgotPassword.dart';
-import 'package:speedcode_streetfood/Widgets/Navigations.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
-import 'package:speedcode_streetfood/colors.dart';
 
-import '../Widgets/textField.dart';
+import '../myCustomUtils/colors.dart';
+import '../myCustomUtils/navigation.dart';
+import '../myCustomUtils/text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -131,6 +131,7 @@ class LoginScreen extends StatelessWidget {
                         child: MyTextField(
                           hintText: "****",
                           showSuffixIcon: true,
+                          obscureText: true,
                         ),
                       ),
                     ),

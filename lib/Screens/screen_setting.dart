@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_notification_setting.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
+
 class Setting extends StatelessWidget {
   const Setting({Key? key}) : super(key: key);
 

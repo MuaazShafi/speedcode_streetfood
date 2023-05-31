@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/colors.dart';
+
+import '../myCustomUtils/colors.dart';
+
 
 class NotificationSetting extends StatefulWidget {
   NotificationSetting({Key? key}) : super(key: key);
