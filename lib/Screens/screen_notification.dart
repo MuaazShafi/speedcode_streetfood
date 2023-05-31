@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
 
 
@@ -44,7 +44,7 @@ class NotificationScreen extends StatelessWidget {
         appBar: AppBar(
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,

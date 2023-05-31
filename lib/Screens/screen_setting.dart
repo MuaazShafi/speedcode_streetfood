@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_notification_setting.dart';
-
+import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
 
 class Setting extends StatelessWidget {
@@ -24,7 +24,7 @@ class Setting extends StatelessWidget {
           backgroundColor: StreetFoodColors.whiteColor,
           leading: GestureDetector(
             onTap: (){
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
@@ -38,10 +38,7 @@ class Setting extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => NotificationSetting()));
+                  Get.to(NotificationSetting());
                 },
                 child: Material(
                   borderRadius: BorderRadius.all(

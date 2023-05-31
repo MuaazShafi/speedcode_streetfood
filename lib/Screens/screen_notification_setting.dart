@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
-
 
 class NotificationSetting extends StatefulWidget {
   NotificationSetting({Key? key}) : super(key: key);
@@ -30,8 +29,8 @@ class _NotificationSettingState extends State<NotificationSetting> {
           elevation: 0,
           backgroundColor: StreetFoodColors.whiteColor,
           leading: GestureDetector(
-            onTap: (){
-              Navigator.pop(context);
+            onTap: () {
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
@@ -45,10 +44,7 @@ class _NotificationSettingState extends State<NotificationSetting> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => NotificationSetting()));
+                  Get.to(NotificationSetting());
                 },
                 child: Material(
                   borderRadius: BorderRadius.all(
@@ -65,7 +61,8 @@ class _NotificationSettingState extends State<NotificationSetting> {
                           Text('New Recipe update'),
                           Spacer(),
                           Switch(
-                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap,
                             activeColor: StreetFoodColors.yellowColor,
                             value: switchValue,
                             onChanged: (bool value) {

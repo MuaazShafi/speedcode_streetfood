@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
-import '../Screens/screen_login.dart';
+import 'package:get/get.dart';
+import 'package:speedcode_streetfood/Screens/screen_login.dart';
 import '../Screens/screen_notification.dart';
 import '../Screens/screen_search.dart';
 import '../Screens/screen_setting.dart';
@@ -81,8 +81,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                 suffixIcon: Icons.arrow_forward_ios,
                 prefixIcon: Icons.settings,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Setting()));
+                  Get.to(Setting());
                 },
                 paddingLeft: 10,
                 paddingRight: 50,
@@ -93,8 +92,58 @@ class _HomeLayoutState extends State<HomeLayout> {
                 suffixIcon: Icons.arrow_forward_ios,
                 prefixIcon: Icons.logout_sharp,
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                  Get.defaultDialog(
+                    title: 'Logout',
+                    middleText: "Are you sure you want to log out?",
+                    confirm: InkWell(
+                      onTap: () {
+                       Get.to(LoginScreen());
+                      },
+                      child: Ink(
+                        height: 30,
+                        width: 55,
+                        decoration: BoxDecoration(
+                          color: StreetFoodColors.yellowColor,
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "YES",
+                            style: TextStyle(
+                              color: StreetFoodColors.whiteColor,
+                              fontFamily: 'PoppinsRegular',
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    cancel: InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Ink(
+                        height: 30,
+                        width: 55,
+                        decoration: BoxDecoration(
+                            color: StreetFoodColors.whiteColor,
+                            borderRadius: BorderRadius.circular(25),
+                            border: Border.all(
+                              color: StreetFoodColors.yellowColor,
+                            )),
+                        child: Center(
+                          child: Text(
+                            "NO",
+                            style: TextStyle(
+                              color: StreetFoodColors.yellowColor,
+                              fontFamily: 'PoppinsRegular',
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
                 },
                 paddingLeft: 10,
                 paddingRight: 50,
@@ -139,13 +188,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                               Badge(
                                 child: GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            NotificationScreen(),
-                                      ),
-                                    );
+                                    Get.to(NotificationScreen());
                                   },
                                   child: Icon(
                                     Icons.notifications_none,
@@ -206,12 +249,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                                 onTap: () {},
                                 child: GestureDetector(
                                   onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => SearchScreen(),
-                                      ),
-                                    );
+                                   Get.to(SearchScreen());
                                   },
                                   child: Icon(
                                     Icons.search,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
-
+import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
 
 class OnBoarding3 extends StatelessWidget {
@@ -53,8 +53,7 @@ class OnBoarding3 extends StatelessWidget {
           child: FloatingActionButton.extended(
             backgroundColor: StreetFoodColors.yellowColor,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SignupScreen()));
+              Get.to(SignupScreen());
             },
             label: Text(
               "GET STARTED",

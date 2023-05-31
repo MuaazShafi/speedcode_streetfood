@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/navigation.dart';
@@ -25,7 +26,7 @@ class ForgotScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
@@ -106,8 +107,7 @@ class ForgotScreen extends StatelessWidget {
               Expanded(
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Navigation()));
+                   Get.to(Navigation());
                   },
                   child: Container(
                     height: 36,

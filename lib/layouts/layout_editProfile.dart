@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../myCustomUtils/colors.dart';
 
@@ -15,7 +16,7 @@ class EditProfileLayout extends StatelessWidget {
           elevation: 0,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,

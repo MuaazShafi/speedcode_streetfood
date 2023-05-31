@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_onBoarding1.dart';
 import 'package:speedcode_streetfood/myCustomUtils/colors.dart';
@@ -19,8 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 3),
       () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => OnBoarding1()));
+        Get.to(OnBoarding1());
       },
     );
   }

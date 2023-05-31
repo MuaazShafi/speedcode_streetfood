@@ -3,6 +3,7 @@ import 'package:speedcode_streetfood/Screens/screen_login.dart';
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/navigation.dart';
 import '../myCustomUtils/text_field.dart';
+import 'package:get/get.dart';
 
 class SignupScreen extends StatelessWidget {
   SignupScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class SignupScreen extends StatelessWidget {
           automaticallyImplyLeading: false,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
@@ -199,10 +200,7 @@ class SignupScreen extends StatelessWidget {
                       elevation: 1.5,
                       child: GestureDetector(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Navigation()));
+                          Get.to(Navigation());
                         },
                         child: Container(
                           height: 36,
@@ -277,10 +275,7 @@ class SignupScreen extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => LoginScreen()));
+                              Get.to(LoginScreen());
                             },
                             child: Text(
                               'LOGIN',

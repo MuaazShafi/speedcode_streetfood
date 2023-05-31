@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/Screens/screen_onBoarding3.dart';
 import 'package:speedcode_streetfood/Screens/screen_signup.dart';
-
-
+import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
 
 class OnBoarding2 extends StatelessWidget {
@@ -22,10 +21,7 @@ class OnBoarding2 extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 10),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => SignupScreen()));
+                    Get.to(SignupScreen());
                   },
                   child: Text(
                     "Skip",
@@ -77,8 +73,7 @@ class OnBoarding2 extends StatelessWidget {
           child: FloatingActionButton(
             backgroundColor: StreetFoodColors.yellowColor,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => OnBoarding3()));
+              Get.to(OnBoarding3());
             },
             child: Icon(
               Icons.arrow_forward,

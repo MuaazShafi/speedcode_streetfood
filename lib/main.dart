@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcode_streetfood/Screens/screen_onBoarding1.dart';
 import 'package:speedcode_streetfood/Screens/screen_splash.dart';
 
 void main() {

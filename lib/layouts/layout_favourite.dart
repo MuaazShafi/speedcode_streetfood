@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/my_favourite_item.dart';
@@ -67,7 +68,7 @@ class FavouriteLayout extends StatelessWidget {
           centerTitle: true,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Get.back();
             },
             child: Icon(
               Icons.arrow_back_ios,
