@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_onBoarding2.dart';
-import 'package:speedcode_streetfood/Screens/screen_signup.dart';
 import 'package:get/get.dart';
+import 'package:speedcode_streetfood/userScreens/screen_onBoarding3.dart';
+import 'package:speedcode_streetfood/userScreens/screen_signup.dart';
 import '../myCustomUtils/colors.dart';
 
-
-class OnBoarding1 extends StatelessWidget {
-  const OnBoarding1({Key? key}) : super(key: key);
+class OnBoarding2 extends StatelessWidget {
+  const OnBoarding2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,14 +39,14 @@ class OnBoarding1 extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: Image.asset('images/oB01.png'),
+              child: Image.asset('images/oB02.png'),
             ),
             Expanded(
               flex: 2,
               child: Column(
                 children: [
                   Text(
-                    "Get all the healthy recipes\nthat you need",
+                    "Get the exact nutrition\nvalue of everything you eat",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontFamily: 'PoppinsMedium', fontSize: 19),
                   ),
@@ -55,8 +54,8 @@ class OnBoarding1 extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                    "Whether you are losing or gaining. we\nhave all the "
-                    "recipes you’ll need.",
+                    "We are updating our food database every\nminute to help "
+                    "you track your calorie",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: StreetFoodColors.greyColor,
@@ -74,7 +73,7 @@ class OnBoarding1 extends StatelessWidget {
           child: FloatingActionButton(
             backgroundColor: StreetFoodColors.yellowColor,
             onPressed: () {
-              Get.to(OnBoarding2());
+              Get.to(OnBoarding3());
             },
             child: Icon(
               Icons.arrow_forward,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_forgotPassword.dart';
-import 'package:speedcode_streetfood/Screens/screen_signup.dart';
 import 'package:get/get.dart';
+import 'package:speedcode_streetfood/userScreens/screen_forgotPassword.dart';
+import 'package:speedcode_streetfood/userScreens/screen_signup.dart';
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/navigation.dart';
 import '../myCustomUtils/text_field.dart';

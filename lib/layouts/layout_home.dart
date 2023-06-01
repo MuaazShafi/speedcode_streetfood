@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
-import 'package:speedcode_streetfood/Screens/screen_login.dart';
-import '../Screens/screen_notification.dart';
-import '../Screens/screen_search.dart';
-import '../Screens/screen_setting.dart';
+import 'package:speedcode_streetfood/chefScreens/screen_switching.dart';
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/my_drawer_list.dart';
+import '../userScreens/screen_login.dart';
+import '../userScreens/screen_notification.dart';
+import '../userScreens/screen_search.dart';
+import '../userScreens/screen_setting.dart';
 
 class HomeLayout extends StatefulWidget {
   const HomeLayout({Key? key}) : super(key: key);
   static var currentIndexIndicator = 0;
   static var currentIndexCategory = 0;
   static var bottomBarCurrentIndex = 0;
+  static bool? switchValue;
 
   static const List<String> imageList = [
     'images/mutton.jpg',
@@ -46,35 +48,77 @@ class _HomeLayoutState extends State<HomeLayout> {
     return SafeArea(
       child: Scaffold(
         drawer: Drawer(
+          width: 275,
           child: ListView(
             children: [
-              UserAccountsDrawerHeader(
-                decoration: BoxDecoration(
-                  color: StreetFoodColors.whiteColor,
-                ),
-                currentAccountPicture: CircleAvatar(
-                  backgroundImage: AssetImage('images/profile.jpg'),
-                ),
-                accountName: Text(
-                  "John ",
-                  style: TextStyle(
-                    color: StreetFoodColors.blackColor,
-                    fontFamily: 'PoppinsMedium',
-                    fontSize: 12,
+              DrawerHeader(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 7),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 72,
+                            width: 72,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: StreetFoodColors.whiteColor,
+                              border: Border.all(
+                                color: StreetFoodColors.greyColor,
+                              ),
+                            ),
+                            child: Center(
+                              child: CircleAvatar(
+                                radius: 32,
+                                backgroundImage: AssetImage('images/profile.jpg'),
+                              ),
+                            ),
+                          ),
+                          Switch(
+                            // materialTapTargetSize:
+                            //     MaterialTapTargetSize.shrinkWrap,
+                            activeColor: StreetFoodColors.yellowColor,
+                            value: HomeLayout.switchValue ?? false,
+                            onChanged: (bool value) {
+                              setState(() {
+                                HomeLayout.switchValue = value;
+                              });
+                              if(HomeLayout.switchValue!){
+                                Get.to(SwitchingScreen());
+                                HomeLayout.switchValue=false;
+                              }
+                            },
+                          )
+                        ],
+                      ),
+                      Spacer(),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "John ",
+                          style: TextStyle(
+                            color: StreetFoodColors.blackColor,
+                            fontFamily: 'PoppinsMedium',
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "abc@gmail.com",
+                          style: TextStyle(
+                            color: StreetFoodColors.greyColor,
+                            fontFamily: 'PoppinsRegular',
+                            fontSize: 9,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                accountEmail: Text(
-                  "abc@gmail.com",
-                  style: TextStyle(
-                    color: StreetFoodColors.greyColor,
-                    fontFamily: 'PoppinsRegular',
-                    fontSize: 9,
-                  ),
-                ),
-              ),
-              Divider(
-                thickness: 2,
-                color: StreetFoodColors.greyColor,
               ),
               MyDrawerList(
                 text: "Setting",
@@ -97,7 +141,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                     middleText: "Are you sure you want to log out?",
                     confirm: InkWell(
                       onTap: () {
-                       Get.to(LoginScreen());
+                        Get.to(LoginScreen());
                       },
                       child: Ink(
                         height: 30,
@@ -170,19 +214,10 @@ class _HomeLayoutState extends State<HomeLayout> {
                         children: [
                           Row(
                             children: [
-                              Center(
-                                child: Builder(
-                                  builder: (context) => GestureDetector(
-                                    onTap: () {
-                                      Scaffold.of(context).openDrawer();
-                                    },
-                                    child: CircleAvatar(
-                                      radius: 30,
-                                      backgroundImage:
-                                          AssetImage('images/profile.jpg'),
-                                    ),
-                                  ),
-                                ),
+                              CircleAvatar(
+                                radius: 30,
+                                backgroundImage:
+                                    AssetImage('images/profile.jpg'),
                               ),
                               Spacer(),
                               Badge(
@@ -196,9 +231,16 @@ class _HomeLayoutState extends State<HomeLayout> {
                                   ),
                                 ),
                               ),
-                              Icon(
-                                Icons.menu,
-                                color: StreetFoodColors.whiteColor,
+                              Builder(
+                                builder: (context) => GestureDetector(
+                                  onTap: () {
+                                    Scaffold.of(context).openDrawer();
+                                  },
+                                  child: Icon(
+                                    Icons.menu,
+                                    color: StreetFoodColors.whiteColor,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -249,7 +291,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                                 onTap: () {},
                                 child: GestureDetector(
                                   onTap: () {
-                                   Get.to(SearchScreen());
+                                    Get.to(SearchScreen());
                                   },
                                   child: Icon(
                                     Icons.search,

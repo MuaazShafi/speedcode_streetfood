@@ -30,5 +30,6 @@ class Assets {
   static const String imagesStrawberryFrechCake = 'images/Strawberry-Frech-Cake.jpg';
   static const String imagesTikka = 'images/tikka.jpg';
   static const String imagesVanillaCardamomKulfi = 'images/Vanilla-Cardamom-Kulfi.jpg';
+  static const String imagesWaiting = 'images/waiting.gif';
 
 }

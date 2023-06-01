@@ -7,4 +7,5 @@ class StreetFoodColors{
   static const Color whiteColor = Color(0xffffffff);
   static const Color darkGreyColor = Color(0xff171717);
   static const Color splashBackground = Color(0xff263238);
+  static const Color chefSplashBackground = Color(0xff131313);
 }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_signup.dart';
 import 'package:get/get.dart';
+import 'package:speedcode_streetfood/userScreens/screen_onBoarding2.dart';
+import 'package:speedcode_streetfood/userScreens/screen_signup.dart';
 import '../myCustomUtils/colors.dart';
 
-class OnBoarding3 extends StatelessWidget {
-  const OnBoarding3({Key? key}) : super(key: key);
+
+class OnBoarding1 extends StatelessWidget {
+  const OnBoarding1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,19 +16,38 @@ class OnBoarding3 extends StatelessWidget {
         appBar: AppBar(
           elevation: 0,
           backgroundColor: StreetFoodColors.whiteColor,
+          actions: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    Get.to(SignupScreen());
+                  },
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(
+                        color: StreetFoodColors.greyColor,
+                        fontFamily: 'PoppinsMedium',
+                        fontSize: 15),
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
         body: Column(
           children: [
             Expanded(
               flex: 3,
-              child: Image.asset('images/oB03.png'),
+              child: Image.asset('images/oB01.png'),
             ),
             Expanded(
               flex: 2,
               child: Column(
                 children: [
                   Text(
-                    "Get daily calorie target\nbased on your body weight",
+                    "Get all the healthy recipes\nthat you need",
                     textAlign: TextAlign.center,
                     style: TextStyle(fontFamily: 'PoppinsMedium', fontSize: 19),
                   ),
@@ -34,8 +55,8 @@ class OnBoarding3 extends StatelessWidget {
                     height: 15,
                   ),
                   Text(
-                    "Set your target weight and select your\nmonthly schedule, "
-                    "and we’ill do the rest",
+                    "Whether you are losing or gaining. we\nhave all the "
+                    "recipes you’ll need.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: StreetFoodColors.greyColor,
@@ -50,17 +71,14 @@ class OnBoarding3 extends StatelessWidget {
         ),
         floatingActionButton: Padding(
           padding: const EdgeInsets.only(bottom: 20),
-          child: FloatingActionButton.extended(
+          child: FloatingActionButton(
             backgroundColor: StreetFoodColors.yellowColor,
             onPressed: () {
-              Get.to(SignupScreen());
+              Get.to(OnBoarding2());
             },
-            label: Text(
-              "GET STARTED",
-              style: TextStyle(
-                  color: StreetFoodColors.blackColor,
-                  fontFamily: 'PoppinsSemiBold',
-                  fontSize: 15),
+            child: Icon(
+              Icons.arrow_forward,
+              color: StreetFoodColors.blackColor,
             ),
           ),
         ),

@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:speedcode_streetfood/userScreens/screen_notification_setting.dart';
 import '../myCustomUtils/colors.dart';
 
-class NotificationSetting extends StatefulWidget {
-  NotificationSetting({Key? key}) : super(key: key);
-
-  @override
-  State<NotificationSetting> createState() => _NotificationSettingState();
-}
-
-class _NotificationSettingState extends State<NotificationSetting> {
-  bool switchValue = false;
+class Setting extends StatelessWidget {
+  const Setting({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +12,7 @@ class _NotificationSettingState extends State<NotificationSetting> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Notification Setting",
+            "Setting",
             style: TextStyle(
               color: StreetFoodColors.blackColor,
               fontFamily: 'PoppinsMedium',
@@ -29,7 +23,7 @@ class _NotificationSettingState extends State<NotificationSetting> {
           elevation: 0,
           backgroundColor: StreetFoodColors.whiteColor,
           leading: GestureDetector(
-            onTap: () {
+            onTap: (){
               Get.back();
             },
             child: Icon(
@@ -53,24 +47,18 @@ class _NotificationSettingState extends State<NotificationSetting> {
                   elevation: 1.5,
                   child: Container(
                     height: 42,
-                    width: 276,
+                    width: 272,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20, right: 15),
                       child: Row(
                         children: [
-                          Text('New Recipe update'),
+                          Text('Notification'),
                           Spacer(),
-                          Switch(
-                            materialTapTargetSize:
-                                MaterialTapTargetSize.shrinkWrap,
-                            activeColor: StreetFoodColors.yellowColor,
-                            value: switchValue,
-                            onChanged: (bool value) {
-                              setState(() {
-                                switchValue = value;
-                              });
-                            },
-                          )
+                          Icon(
+                            Icons.arrow_forward_ios_sharp,
+                            color: StreetFoodColors.yellowColor,
+                            size: 15,
+                          ),
                         ],
                       ),
                     ),

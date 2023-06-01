@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_notification_setting.dart';
 import 'package:get/get.dart';
 import '../myCustomUtils/colors.dart';
 
-class Setting extends StatelessWidget {
-  const Setting({Key? key}) : super(key: key);
+class NotificationSetting extends StatefulWidget {
+  NotificationSetting({Key? key}) : super(key: key);
+
+  @override
+  State<NotificationSetting> createState() => _NotificationSettingState();
+}
+
+class _NotificationSettingState extends State<NotificationSetting> {
+  bool switchValue = false;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +18,7 @@ class Setting extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Setting",
+            "Notification Setting",
             style: TextStyle(
               color: StreetFoodColors.blackColor,
               fontFamily: 'PoppinsMedium',
@@ -23,7 +29,7 @@ class Setting extends StatelessWidget {
           elevation: 0,
           backgroundColor: StreetFoodColors.whiteColor,
           leading: GestureDetector(
-            onTap: (){
+            onTap: () {
               Get.back();
             },
             child: Icon(
@@ -47,18 +53,24 @@ class Setting extends StatelessWidget {
                   elevation: 1.5,
                   child: Container(
                     height: 42,
-                    width: 272,
+                    width: 276,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20, right: 15),
                       child: Row(
                         children: [
-                          Text('Notification'),
+                          Text('New Recipe update'),
                           Spacer(),
-                          Icon(
-                            Icons.arrow_forward_ios_sharp,
-                            color: StreetFoodColors.yellowColor,
-                            size: 15,
-                          ),
+                          Switch(
+                            // materialTapTargetSize:
+                            //     MaterialTapTargetSize.shrinkWrap,
+                            activeColor: StreetFoodColors.yellowColor,
+                            value: switchValue,
+                            onChanged: (bool value) {
+                              setState(() {
+                                switchValue = value;
+                              });
+                            },
+                          )
                         ],
                       ),
                     ),

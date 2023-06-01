@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import 'package:speedcode_streetfood/Screens/screen_onBoarding1.dart';
 import 'package:speedcode_streetfood/myCustomUtils/colors.dart';
+import 'package:speedcode_streetfood/userScreens/screen_onBoarding1.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);

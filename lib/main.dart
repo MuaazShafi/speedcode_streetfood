@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcode_streetfood/Screens/screen_splash.dart';
+import 'package:speedcode_streetfood/userScreens/screen_splash.dart';
 
 void main() {
   runApp(const MyApp());
