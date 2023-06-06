@@ -6,8 +6,8 @@ import 'package:water_drop_nav_bar/water_drop_nav_bar.dart';
 import '../layouts/layout_editProfile.dart';
 import 'colors.dart';
 
-class Navigation extends StatefulWidget {
-  Navigation({Key? key}) : super(key: key);
+class BottomBar extends StatefulWidget {
+  BottomBar({Key? key}) : super(key: key);
 
   static const List<Widget> pages = [
     HomeLayout(),
@@ -16,17 +16,17 @@ class Navigation extends StatefulWidget {
   ];
 
   @override
-  State<Navigation> createState() => _NavigationState();
+  State<BottomBar> createState() => _BottomBarState();
 }
 
-class _NavigationState extends State<Navigation> {
+class _BottomBarState extends State<BottomBar> {
   int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Navigation.pages[selectedIndex],
+        body: BottomBar.pages[selectedIndex],
         bottomNavigationBar: WaterDropNavBar(
           iconSize: 30,
           inactiveIconColor: StreetFoodColors.whiteColor,

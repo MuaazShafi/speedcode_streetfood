@@ -7,6 +7,7 @@ class MyTextField extends StatefulWidget {
   final bool? obscureText;
   final bool showSuffixIcon;
   final TextInputType? keyboardType;
+  final Color? boarderColor;
 
   const MyTextField({
     Key? key,
@@ -14,6 +15,7 @@ class MyTextField extends StatefulWidget {
     this.obscureText,
     this.showSuffixIcon = false,
     this.keyboardType,
+    this.boarderColor,
   }) : super(key: key);
 
   @override
@@ -58,19 +60,19 @@ class _MyTextFieldState extends State<MyTextField> {
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: StreetFoodColors.yellowColor,
+            color: widget.boarderColor ?? StreetFoodColors.yellowColor,
           ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: StreetFoodColors.yellowColor,
+            color: widget.boarderColor ?? StreetFoodColors.yellowColor,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide(
-            color: StreetFoodColors.yellowColor,
+            color: widget.boarderColor ?? StreetFoodColors.yellowColor,
           ),
         ),
         suffixIcon: widget.showSuffixIcon

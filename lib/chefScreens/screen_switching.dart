@@ -17,7 +17,7 @@ class _SwitchingScreenState extends State<SwitchingScreen> {
     // TODO: implement initState
     super.initState();
     Timer(
-      Duration(seconds: 3),
+      Duration(seconds: 5),
       () {
         Get.to(UpgradeChefModeScreen());
       },

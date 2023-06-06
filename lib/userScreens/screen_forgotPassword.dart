@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../myCustomUtils/colors.dart';
-import '../myCustomUtils/navigation.dart';
+import '../myCustomUtils/bottom_bar.dart';
 
 class ForgotScreen extends StatelessWidget {
   const ForgotScreen({Key? key}) : super(key: key);
@@ -107,7 +107,7 @@ class ForgotScreen extends StatelessWidget {
               Expanded(
                 child: GestureDetector(
                   onTap: () {
-                   Get.to(Navigation());
+                   Get.to(BottomBar());
                   },
                   child: Container(
                     height: 36,

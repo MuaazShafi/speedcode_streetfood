@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:speedcode_streetfood/userScreens/screen_login.dart';
 import '../myCustomUtils/colors.dart';
-import '../myCustomUtils/navigation.dart';
+import '../myCustomUtils/bottom_bar.dart';
 import '../myCustomUtils/text_field.dart';
 import 'package:get/get.dart';
 
@@ -200,7 +200,7 @@ class SignupScreen extends StatelessWidget {
                       elevation: 1.5,
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(Navigation());
+                          Get.to(BottomBar());
                         },
                         child: Container(
                           height: 36,

@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:speedcode_streetfood/userScreens/screen_forgotPassword.dart';
 import 'package:speedcode_streetfood/userScreens/screen_signup.dart';
 import '../myCustomUtils/colors.dart';
-import '../myCustomUtils/navigation.dart';
+import '../myCustomUtils/bottom_bar.dart';
 import '../myCustomUtils/text_field.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -161,7 +161,7 @@ class LoginScreen extends StatelessWidget {
                       elevation: 1.5,
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(Navigation());
+                          Get.to(BottomBar());
                         },
                         child: Container(
                           height: 36,
