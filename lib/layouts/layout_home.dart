@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:speedcode_streetfood/chefScreens/screen_switching.dart';
+import 'package:speedcode_streetfood/layouts/item_feature_recipe.dart';
+import 'package:speedcode_streetfood/layouts/item_food.dart';
+import 'package:speedcode_streetfood/myCustomUtils/category_indicator.dart';
+import 'package:speedcode_streetfood/myCustomUtils/indicator.dart';
 import '../myCustomUtils/colors.dart';
 import '../myCustomUtils/my_drawer_list.dart';
 import '../userScreens/screen_login.dart';
@@ -338,92 +342,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                       });
                     },
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Transform(
-                        transform: Matrix4.skewX(-0.15),
-                        child: Container(
-                          height: 153,
-                          width: 302,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              fit: BoxFit.fitWidth,
-                              image: AssetImage(
-                                HomeLayout.imageList[
-                                    index % HomeLayout.imageList.length],
-                              ),
-                            ),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(15),
-                            ),
-                          ),
-                          child: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 18.0, bottom: 10),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  top: 70,
-                                  child: Container(
-                                    height: 60,
-                                    width: 140,
-                                    decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(0.7),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        HomeLayout.itemName[
-                                            index % HomeLayout.itemName.length],
-                                        style: TextStyle(
-                                            color: StreetFoodColors.whiteColor,
-                                            fontSize: 15,
-                                            fontFamily: 'PoppinsSemiBold'),
-                                      ),
-                                      Text(
-                                        'by Jacob Jones',
-                                        style: TextStyle(
-                                            color: StreetFoodColors.greyColor,
-                                            fontFamily: 'PoppinsRegular',
-                                            fontSize: 10),
-                                      ),
-                                      RatingBar.builder(
-                                        initialRating: 3.5,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemSize: 11,
-                                        itemCount: 5,
-                                        itemPadding: EdgeInsets.symmetric(
-                                            horizontal: 1.0),
-                                        itemBuilder: (context, _) => Icon(
-                                          Icons.star,
-                                          color: StreetFoodColors.yellowColor,
-                                        ),
-                                        onRatingUpdate: (rating) {
-                                          print(rating);
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    // itemCount:HomeScreen.imageList.length,
-                    // separatorBuilder: (context, i) => SizedBox(
-                    //   width: 15,
-                    // ),
+                    itemBuilder: (context, index) => ItemFeatureRecipe(index),
                   ),
                 ),
                 SizedBox(
@@ -433,7 +352,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     for (var a = 0; a < HomeLayout.imageList.length; a++)
-                      buildIndicator(HomeLayout.currentIndexIndicator == a)
+                      Indicator(isSelected: HomeLayout.currentIndexIndicator == a,)
                   ],
                 ),
                 Padding(
@@ -469,8 +388,8 @@ class _HomeLayoutState extends State<HomeLayout> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         for (var b = 0; b < HomeLayout.imageList.length; b++)
-                          buildCategoryIndicator(
-                              HomeLayout.currentIndexCategory == b)
+                          CategoryIndicator(isSelected1: HomeLayout.currentIndexCategory == b,
+                              )
                       ],
                     ),
                   ),
@@ -487,118 +406,7 @@ class _HomeLayoutState extends State<HomeLayout> {
                       mainAxisSpacing: 15,
                       mainAxisExtent: 220,
                     ),
-                    itemBuilder: (context, i) => Container(
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage(
-                            HomeLayout.imageList[i],
-                          ),
-                        ),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Column(
-                          children: [
-                            Align(
-                              alignment: Alignment.topRight,
-                              child: Container(
-                                height: 21,
-                                width: 21,
-                                decoration: BoxDecoration(
-                                  color: StreetFoodColors.blackColor
-                                      .withOpacity(0.3),
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: StreetFoodColors.whiteColor,
-                                  size: 11,
-                                ),
-                              ),
-                            ),
-                            Spacer(),
-                            Align(
-                              alignment: Alignment.bottomLeft,
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    height: 50,
-                                    width: 150,
-                                    decoration: BoxDecoration(
-                                      color: Colors.black.withOpacity(0.7),
-                                      borderRadius: BorderRadius.circular(5),
-                                    ),
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Chilli Biryani',
-                                        style: TextStyle(
-                                          color: StreetFoodColors.whiteColor,
-                                          fontFamily: 'PoppinsSemiBold',
-                                          fontSize: 13,
-                                        ),
-                                      ),
-                                      Text(
-                                        'by John Jones',
-                                        style: TextStyle(
-                                          color: StreetFoodColors.greyColor,
-                                          fontFamily: 'PoppinsRegular',
-                                          fontSize: 9,
-                                        ),
-                                      ),
-                                      Row(
-                                        children: [
-                                          RatingBar.builder(
-                                            initialRating: 3.5,
-                                            minRating: 1,
-                                            direction: Axis.horizontal,
-                                            allowHalfRating: true,
-                                            itemSize: 11,
-                                            itemCount: 5,
-                                            itemPadding: EdgeInsets.symmetric(
-                                                horizontal: 1.0),
-                                            itemBuilder: (context, _) => Icon(
-                                              Icons.star,
-                                              color:
-                                                  StreetFoodColors.yellowColor,
-                                            ),
-                                            onRatingUpdate: (rating) {
-                                              print(rating);
-                                            },
-                                          ),
-                                          Spacer(),
-                                          Icon(
-                                            Icons.access_time,
-                                            color: StreetFoodColors.whiteColor,
-                                            size: 10,
-                                          ),
-                                          Text(
-                                            '30 min',
-                                            style: TextStyle(
-                                              color:
-                                                  StreetFoodColors.whiteColor,
-                                              fontSize: 8,
-                                              fontFamily: 'PoppinsRegular',
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    itemBuilder: (context, i) => ItemFood(i),
                   ),
                 ),
               ],
@@ -608,41 +416,4 @@ class _HomeLayoutState extends State<HomeLayout> {
       ),
     );
   }
-}
-
-Widget buildIndicator(bool isSelected) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 4),
-    child: Container(
-      height: isSelected ? 12 : 10,
-      width: isSelected ? 12 : 10,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        color: isSelected
-            ? StreetFoodColors.yellowColor
-            : StreetFoodColors.greyColor,
-      ),
-    ),
-  );
-}
-
-Widget buildCategoryIndicator(bool isSelected1) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 1),
-    child: Container(
-      height: 29,
-      width: 90,
-      decoration: BoxDecoration(
-        color: isSelected1
-            ? StreetFoodColors.yellowColor
-            : StreetFoodColors.whiteColor,
-        borderRadius: BorderRadius.circular(07),
-        border: Border.all(
-          width: 1.5,
-          color: StreetFoodColors.yellowColor,
-        ),
-      ),
-      child: Center(child: Text("---")),
-    ),
-  );
 }

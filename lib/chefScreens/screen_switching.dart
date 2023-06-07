@@ -19,7 +19,7 @@ class _SwitchingScreenState extends State<SwitchingScreen> {
     Timer(
       Duration(seconds: 5),
       () {
-        Get.to(UpgradeChefModeScreen());
+        Get.off(UpgradeChefModeScreen());
       },
     );
   }
